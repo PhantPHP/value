@@ -1,0 +1,39 @@
+{
+    "name": "phant/value",
+    "description": "Manage value easily",
+    "license": "MIT",
+    "keywords": ["value handler", "value manager", "value component", "value service", "value handler", "value manager", "value component", "value service", "value sender"],
+    "authors": [
+        {
+            "name": "Lenny ROUANET",
+            "email": "lennyrouanet@users.noreply.github.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": ".package"
+    },
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "3.*",
+        "phpstan/phpstan": "1.*",
+        "phpunit/phpunit": "9.*"
+    },
+    "scripts": {
+        "lint": ".package/bin/php-cs-fixer fix ./ --rules=@PSR12",
+        "analyse": ".package/bin/phpstan analyse component",
+        "test": ".package/bin/phpunit test --testdox",
+        "coverage": "XDEBUG_MODE=coverage .package/bin/phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phant\\Value\\": "component/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "test"
+        }
+    }
+}

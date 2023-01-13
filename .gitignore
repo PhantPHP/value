@@ -1,0 +1,12 @@
+# Dependencies
+composer.lock
+.package/
+
+# Test
+.coverage*
+.phpunit*
+
+# Dev
+.DS_Store
+.nova/*
+.php-cs-fixer.cache

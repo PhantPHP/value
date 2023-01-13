@@ -1,0 +1,15 @@
+<phpunit bootstrap=".package/autoload.php">
+	<testsuites>
+		<testsuite name="component">
+			<directory>test</directory>
+		</testsuite>
+	</testsuites>
+	<coverage processUncoveredFiles="true">
+		<include>
+			<directory suffix=".php">component</directory>
+		</include>
+		<report>
+			<html outputDirectory=".coverage" lowUpperBound="50" highLowerBound="90"/>
+		</report>
+	</coverage>
+</phpunit>
