@@ -130,8 +130,9 @@ class Text
     {
         $string = $this->value;
         $string = ltrim($string);
-        $firstLetter = strtolower($string[0]);
-        $firstLetter = (string) (new self($firstLetter))->removeAccents();
+        $string = (string) (new self($string))->removeAccents();
+        $firstLetter = substr($string, 0, 1);
+        $firstLetter = strtolower($firstLetter);
 
         return in_array($firstLetter, ['a','e','i','o','u','y']);
     }
